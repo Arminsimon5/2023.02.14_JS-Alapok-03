@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feladat1</title>
+</head>
+<body>
+    <h1>feladat1</h1>
+    <h2>Gondoltam egy egész számra 1-100 között. Találd ki!</h2>
+    <label for="tipp">Írja ide a tippet:</label>
+    <input type="text" id="tipp" >
+    <button type="button" id="tippElkuld">Elküld</button>
+    <p id="visszajelzes"></p>
+    <script>
+        const szam = Math.floor(Math.random() * 100 + 1);
+        console.log(szam);
+        document.getElementById("tippElkuld").onclick = function(){
+            const tipp =  document.getElementById("tipp").value;
+            visszajelzes = document.getElementById("visszajelzes");
+            if (tipp == szam) {
+                alert("Erre a számra gondoltam.")
+            }
+            else if (tipp > szam) {
+                alert("Kisebb számra gondoltam")
+            }
+            else if (tipp < szam) {
+                alert("Nagyobb számra gondoltam.")
+            }
+        }
+    </script>
+</body>
+</html>
